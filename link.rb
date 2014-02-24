@@ -9,7 +9,7 @@ Dir.foreach(baseddir) do |f|
   # les dossiers en excluant . et ..  
   if File.file?(f) and !(f == 'link.rb' || f =~ /^*.swp/ ) or File.directory?(f) and !(f =='.' || f == '..'|| f == '.git')
     #puts f 
-    exec( "ln -s "+f+" ~/"+f)
+    exec( "ln -s -F "+f+" ~/"+f)
     puts "Symbolic link "+f+" create."
   end
 end
