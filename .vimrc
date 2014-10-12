@@ -59,6 +59,7 @@ au InsertLeave * set cursorline
 au InsertLeave * set cursorcolumn
 
 "highlight CursorLine                    cterm=none ctermbg=StatusLine
+highlight CursorLine                    cterm=none ctermbg=LightGray
 highlight CursorColumn                  cterm=none ctermbg=DarkGray
 
 " Affichee en surbrillance les recherche
