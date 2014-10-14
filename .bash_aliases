@@ -1,7 +1,7 @@
 #remap commande ls
-alias ll='ls -l -G'
-alias la='ls -a -G'
-alias lla='ls -la -G'
+alias ll='ls -lh'
+alias la='ls -ah'
+alias lla='ls -lah'
 
 #afficher les ligne sur nano
 alias nano='nano -c'
