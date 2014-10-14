@@ -10,7 +10,7 @@ for i in `find . -d 1 \( ! -iname ".git" ! -iname "*.swp" \)`
 do
   TMP=$(echo $i | sed 's/'$SOURCE'\///')
   #echo $PWD/$TMP
-  rm -rf $HOME/tmp/$TMP
-  ln -s $PWD/$TMP $HOME/tmp/$TMP
+  rm -rf $HOME/$TMP
+  ln -s $PWD/$TMP $HOME/$TMP
   echo "Symbolic link "$TMP" create."
 done
