@@ -6,7 +6,7 @@ SOURCE=$(dirname $0)
 #echo $SOURCE
 #echo $HOME
 
-for i in `find . -d 1 \( ! -iname ".git" ! -iname "*.swp" \)`
+for i in `find . -maxdepth 1 \( ! -iname ".git" ! -iname "*.swp" \)`
 do
   TMP=$(echo $i | sed 's/'$SOURCE'\///')
   #echo $PWD/$TMP
