@@ -30,7 +30,7 @@ echo $newHost > /etc/hostname
  
 #on recupere l'ancien nom de la machine
 #ici NR defini le numero de ligne
-oldHost = cat /etc/hosts | awk 'NR==2 {print $2}'
- 
+
+oldHost=$(cat /etc/hosts | awk 'NR==2 {print $2}')
 #on remplace l ancien nom par le nouveau dans le fichier hosts
-sed -i 's/$oldHost/$newHost/g' /etc/hosts
+sed -i 's/'$oldHost'/'$newHost'/g' /etc/hosts
