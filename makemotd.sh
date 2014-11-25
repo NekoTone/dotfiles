@@ -30,7 +30,7 @@ $GRIS  -> Hostname : $BLANC`hostname -s`
 $GRIS  -> System   : $BLANC`cat /etc/issue | awk {'print $1'}i | sed q` `cat /etc/debian_version`
 $GRIS  -> Kernel   : $BLANC`uname -or`
 $GRIS  -> Archi    : $BLANC`uname -m`
-$GRIS  -> Uptime   : $BLANC`uptime | awk {'print $3'} | sed s/,//g` days
+$GRIS  -> Uptime   : $BLANC`uptime | awk {'print $3'} | sed s/,//g` `uptime | awk {'print $4'} | sed s/,//g`
 
 " > /etc/motd
 cat /etc/motd
