@@ -27,10 +27,10 @@ $BLANC  |\\033[6;40m_____$BLANC|\\033[6;40m___$BLANC| |\\033[6;40m_$BLANC|\\033[
   
                            
 $GRIS  -> Hostname : $BLANC`hostname -s`
-$GRIS  -> System   : $BLANC`cat /etc/issue | awk {'print $1'}` `cat /etc/debian_version`
+$GRIS  -> System   : $BLANC`cat /etc/issue | awk {'print $1'}i | sed q` `cat /etc/debian_version`
 $GRIS  -> Kernel   : $BLANC`uname -or`
 $GRIS  -> Archi    : $BLANC`uname -m`
-$GRIS  -> Uptime   : $BLANC`uptime | awk {'print $3'} | sed s/,//g`
+$GRIS  -> Uptime   : $BLANC`uptime | awk {'print $3'} | sed s/,//g` days
 
 " > /etc/motd
 cat /etc/motd
