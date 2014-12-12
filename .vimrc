@@ -68,3 +68,6 @@ highlight CursorColumn                  cterm=none ctermbg=DarkGray
 "set incsearch
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
+
+" Desactiver le bip
+set vb t_vb=
