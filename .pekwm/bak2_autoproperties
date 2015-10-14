@@ -1,0 +1,188 @@
+/*
+ Autoproperties. The default template and simple course of autopropping
+ to help you add your own autoproperties. See the documentation for
+ more keywords and the rest of what is possible through this file.
+
+ First, it's good to note that you can't just make up the property
+ string, you need to use a program called 'xprop' to show it. Please
+ conduct the documentation.
+
+ Another good tip is to make sure you have an ApplyOn entry. The
+ autoproperties you define won't do any good if you don't tell pekwm
+ when to apply them!
+
+ Third tip. You can't match a window with more than one property. The
+ first one that matches will be used, the rest ignored (see the gimp
+ example).
+
+ Note that the default entries are commented out, don't comment out your
+ own autoproperties. :)
+*/
+
+Require {
+	Templates = "True"
+}
+
+Property = "^(gecko|Gecko|firefox-bin),^Firefox-bin,,^Customize Toolbar\$" {
+	ApplyOn = "Start New TransientOnly"
+	Border = "False"
+	Titlebar = "False"
+}
+
+/*
+ Auto-group up to 10 mozilla download windows to group you call "moz-dl",
+ using a WM_CLASS and specifying the the download window using the
+ begining of its title. Make the windows go to the top-left corner of
+ your workspace and place them under other windows. Do this when new
+ windows show up, also to so called transient windows.
+*/
+Property = "^mozilla-bin,^Mozilla-bin,,^Saving" {
+ 	ApplyOn = "New Transient"
+ 	Group = "moz-dl" { Size = "10" }
+ 	FrameGeometry = "+0+0"
+ 	Layer = "Below"
+ }
+
+/*
+ Some useful standard application xclock xload and xbiff. This should
+ be fairly clear to you. In addition to what you've allready learned,
+ we make the windows appear without titlebars and borders. We are also
+ using the geometry in all its glory, defining the windows size in
+ addition to its position.
+*/
+# Property = "^xclock,^XClock" {
+# 	ApplyOn = "Start New"
+# 	ClientGeometry = "120x137+0-137"
+# 	Border = "False"; Titlebar = "False"
+# 	Sticky = "True"
+# 	Layer = "Desktop"
+# 	Skip = "Menus FocusToggle Snap"
+# }
+# 
+# Property = "^xload,^XLoad" {
+# 	ApplyOn = "Start New"
+# 	ClientGeometry = "560x137+120-137"
+# 	Border = "False"; Titlebar = "False"
+# 	Sticky = "True"
+# 	Layer = "Desktop"
+# 	Skip = "Menus FocusToggle Snap"
+# }
+# 
+# Property = "^xbiff,^XBiff" {
+# 	ApplyOn = "Start New"
+# 	ClientGeometry = "120x137-120-137"
+# 	Border = "False"; Titlebar = "False"
+# 	Sticky = "True"
+# 	Layer = "Desktop"
+# 	Skip = "Menus FocusToggle Snap"
+# }
+
+
+/*
+ Then for some harbour ordering done in it's own "Harbour {}" section.
+ This is simple really, but you might want to check the documentation on
+ how the positions work.
+
+ Obpager is allways the last dockapp, the cpuload application is the
+ first, and wmnd will get placed in the centre.
+*/
+# Harbour {
+# 	Property = "^obpager,^obpager" {
+# 		Position = "-1"
+# 	}
+# 	Property = ".*,.*cpuload" {
+# 		Position = "1"
+# 	}
+# 	Property = ".*,^wmnd" {
+# 		Position = "0"
+# 	}
+# }
+
+
+// End of harbour order rules. --------------------
+
+
+/*
+ Last, if you have a theme that supports it, or you have hacked one up
+ yourself, you can use the "DecorRules {}" section to make windows show
+ up with independent decorations.
+
+ Here we tell our terminal windows to use the special TERM decoration
+ section found from your theme. Note that this _needs_ a theme that
+ supports it.
+*/
+# DecorRules {
+# 	Property = "^term,^xterm" {
+# 		Decor = "TERM"
+# 	}
+# }
+
+ Group terminal applications
+ */
+Property = "(term|rxvt),(erm|xvt)" {
+ 	ApplyOn = "Reload"
+ 	Group = "term" {
+ 		Size = "5"
+# 		FocusedFirst = "True"
+# 		Raise = "True"
+ 	}
+	Border = "False"
+	ClientGeometry = "750x450+276+150"
+}
+
+Property = "(term|rxvt),(erm|xvt)" {
+ 	ApplyOn = "Start New"
+ 	Group = "term" {
+ 		Size = "5"
+ 	}
+	Border = "False"
+	ClientGeometry = "750x450+276+150"
+}
+
+Property = "^chromium,^Chromium" {
+ 	ApplyOn = "Start New Transient Reload"
+ 	Border = "False"
+	Titlebar = "False"
+	Workspace = "2"
+ }
+
+
+Property = "^rdesktop,^rdesktop" {
+ 	ApplyOn = "New Transient Reload"
+ 	Border = "False"
+	Titlebar = "False"
+	Workspace = "7"
+ }
+
+Property = "^Download,^Iceweasel" {
+ 	ApplyOn = "New Transient Reload"
+ 	Group = "moz" { 
+		Size = "10" 
+		Behind = "True"
+	}
+ 	FrameGeometry = "+0+0"
+ 	Layer = "Below"
+	
+ }
+ 
+Property = "^Navigator,^Iceweasel" {
+	ApplyOn = "Start New Reload"
+	Group = "moz" { Size = "10" }
+	Workspace = "2"
+	
+}
+
+Property = "^acroread,^Acroread" {
+	ApplyOn = "Start New Reload"
+	Workspace = "4"
+}
+
+Property = "^acroread,^Acroread" {
+	ApplyOn = "Start New Reload"
+	Workspace = "4"
+}
+
+Property = "Qt-subapplication,^VirtualBox,^completel" {
+	ApplyOn = "Start New Reload"
+	Workspace = "6"
+}
