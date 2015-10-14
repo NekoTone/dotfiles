@@ -4,6 +4,7 @@ filetype on
 filetype plugin indent on
 filetype plugin on
 
+
 "autocmd vimenter * NERDTree
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -14,8 +15,16 @@ set nocompatible
 set encoding=utf-8
 
 " Affiche le numero des ligne
-set number
+" set number
 
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+  let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline_theme = 'luna'
 " Barre de status
 set laststatus=2 " Nombre de ligne de statut
 set statusline=%F%m\ %r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v]\ %=[Time:\ %{strftime(\"%H:%M\")}]
@@ -25,6 +34,7 @@ set statusline=%F%m\ %r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v]\ %=[Time:\ 
 let mapleader=","
 
 colorscheme molokai 
+"let g:rehash256 = 1
 
 " Redefinition des racourci clavier
 " Afficher la navigation
@@ -72,3 +82,15 @@ let g:rubycomplete_rails = 1
 
 " Desactiver le bip
 set vb t_vb=
+set paste
+
+"supportpour GO
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
