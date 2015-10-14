@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/opt/local/var/macports/distfiles/nginx'
+let g:netrw_dirhist_2='/Users/nbucco/Desktop/test.graffle'
+let g:netrw_dirhist_3='/Users/nbucco/.tmux'
+let g:netrw_dirhist_4='/Users/nbucco/work/go'
+let g:netrw_dirhist_5='/Users/nbucco/work/we4re'
