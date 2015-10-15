@@ -7,7 +7,7 @@ export ZSH=/Users/nbucco/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #obraun linuxonly adben dallas
 #ZSH_THEME="neko"
-ZSH_THEME="agnoster"
+ZSH_THEME="tone"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
