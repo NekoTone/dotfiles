@@ -1,0 +1,9 @@
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  echo "linux alias load";
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "mac alias load";
+fi
+
+alias ll='ls -lh'
+alias la='ls -ah'
+alias lla='ls -lah'

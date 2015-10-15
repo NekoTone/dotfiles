@@ -93,3 +93,6 @@ export GOPATH="$HOME/work/go"
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
 
+if [ -f .aliasrc ]; then
+    source .aliasrc
+fi
