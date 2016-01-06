@@ -14,3 +14,4 @@ alias lla='ls -lah'
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 alias virsh='virsh --connect qemu:///system'
+alias dateinfo='date "+%Y%m%d"'
