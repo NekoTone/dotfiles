@@ -9,3 +9,7 @@ alias la='ls -ah'
 alias lla='ls -lah'
 
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+alias sb="open -a /Applications/Sublime\ Text.app"
+NPM_PACKAGES="${HOME}/.npm-packages"
+alias docker='nocorrect docker'

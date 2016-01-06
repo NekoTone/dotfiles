@@ -51,7 +51,7 @@ ZSH_THEME="tone"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo osx docker golang)
+plugins=(git sudo osx docker golang npm)
 
 # User configuration
 
@@ -96,3 +96,12 @@ export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 if [ -f .aliasrc ]; then
     source .aliasrc
 fi
+eval "$(docker-machine env osxdock)"
+
+#NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+
+#PATH="$NPM_PACKAGES/bin:$PATH"
+## Unset manpath so we can inherit from /etc/manpath via the `manpath`
+## command
+#unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+#MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
