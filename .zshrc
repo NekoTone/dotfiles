@@ -96,7 +96,7 @@ export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 if [ -f .aliasrc ]; then
     source .aliasrc
 fi
-eval "$(docker-machine env osxdock)"
+#eval "$(docker-machine env osxdock)"
 
 #NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
