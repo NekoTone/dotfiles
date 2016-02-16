@@ -1,7 +1,10 @@
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   echo "linux alias load";
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    echo "mac alias load";
+  echo "mac alias load";
+  alias sb="open -a /Applications/Sublime\ Text.app"
+  NPM_PACKAGES="${HOME}/.npm-packages"
+  alias docker='nocorrect docker'
 fi
 
 alias ll='ls -lh'
@@ -9,3 +12,6 @@ alias la='ls -ah'
 alias lla='ls -lah'
 
 alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+alias virsh='virsh --connect qemu:///system'
+alias dateinfo='date "+%Y%m%d"'
