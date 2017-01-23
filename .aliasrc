@@ -15,3 +15,7 @@ alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 
 alias virsh='virsh --connect qemu:///system'
 alias dateinfo='date "+%Y%m%d"'
+
+if [ -f .virshrc.sh ]; then
+    source .virshrc.sh
+fi
