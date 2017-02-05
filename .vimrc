@@ -24,7 +24,7 @@ endif
 let g:airline_symbols.space = "\ua0"
   let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
-let g:airline_theme = 'luna'
+let g:airline_theme = 'ubaryd'
 " Barre de status
 set laststatus=2 " Nombre de ligne de statut
 set statusline=%F%m\ %r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v]\ %=[Time:\ %{strftime(\"%H:%M\")}]
