@@ -27,8 +27,9 @@ let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_theme = 'ubaryd'
 " Barre de status
 set laststatus=2 " Nombre de ligne de statut
-set statusline=%F%m\ %r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v]\ %=[Time:\ %{strftime(\"%H:%M\")}]
+"set statusline=%F%m\ %r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v]\ %=[Time:\ %{strftime(\"%H:%M\")}]
 
+let g:airline#extensions#tmuxline#enabled = 0
 
 " Choix de la touche d introduction du mapping additionnel
 let mapleader=","

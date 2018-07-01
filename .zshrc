@@ -51,12 +51,22 @@ ZSH_THEME="tone"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo osx docker golang npm)
+plugins=(
+	git 
+	sudo 
+	osx 
+	docker 
+	golang 
+	npm 
+	kubectl
+	aws
+)
 
 # User configuration
 
 export PATH="$PATH:/Users/nbucco/perl5/perlbrew/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/nbucco/.rvm/gems/ruby-2.1.1/bin:/Users/nbucco/.rvm/gems/ruby-2.1.1@global/bin:/Users/nbucco/.rvm/rubies/ruby-2.1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/usr/texbin:/sw/bin:/sw/sbin:/opt/local/bin:/opt/local/sbin:/Users/nbucco/.rvm/gems/ruby-2.1.1/bin:/Users/nbucco/.rvm/gems/ruby-2.1.1@global/bin:/Users/nbucco/.rvm/rubies/ruby-2.1.1/bin:/Users/nbucco/.rvm/bin:/Users/nbucco/.rvm/bin:/Users/nbucco/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+export PATH=/Users/nbucco/Library/Python/3.6/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
