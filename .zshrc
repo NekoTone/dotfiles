@@ -115,3 +115,6 @@ fi
 ## command
 #unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 #MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+if [ -f "$PATH:$HOME/.rvm/scripts/rvm" ]; then
+		source "$PATH:$HOME/.rvm/scripts/rvm"
+fi
