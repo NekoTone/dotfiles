@@ -66,7 +66,7 @@ plugins=(
 
 export PATH="$PATH:/Users/nbucco/perl5/perlbrew/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/Users/nbucco/.rvm/gems/ruby-2.1.1/bin:/Users/nbucco/.rvm/gems/ruby-2.1.1@global/bin:/Users/nbucco/.rvm/rubies/ruby-2.1.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/usr/texbin:/sw/bin:/sw/sbin:/opt/local/bin:/opt/local/sbin:/Users/nbucco/.rvm/gems/ruby-2.1.1/bin:/Users/nbucco/.rvm/gems/ruby-2.1.1@global/bin:/Users/nbucco/.rvm/rubies/ruby-2.1.1/bin:/Users/nbucco/.rvm/bin:/Users/nbucco/.rvm/bin:/Users/nbucco/.rvm/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH=/Users/nbucco/Library/Python/3.6/bin:$PATH
+export PATH=/Users/nbucco/Library/Python/3.7/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
