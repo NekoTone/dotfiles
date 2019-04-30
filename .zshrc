@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #obraun linuxonly adben dallas
 #ZSH_THEME="neko"
-ZSH_THEME="tone"
+#ZSH_THEME="tone"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -118,3 +118,5 @@ fi
 if [ -f "$PATH:$HOME/.rvm/scripts/rvm" ]; then
 		source "$PATH:$HOME/.rvm/scripts/rvm"
 fi
+POWERLEVEL9K_MODE='nerdfont-complete'
+source ~/zsh/powerlevel9k/powerlevel9k.zsh-theme
