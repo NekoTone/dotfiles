@@ -15,7 +15,7 @@ set nocompatible
 set encoding=utf-8
 
 " Affiche le numero des ligne
-" set number
+set number
 
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -97,3 +97,4 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 set guifont=HackNerdFontComplete-Regular:h14
+au BufRead,BufNewFile *.conf set filetype=config
