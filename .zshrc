@@ -120,3 +120,6 @@ if [ -f "$PATH:$HOME/.rvm/scripts/rvm" ]; then
 fi
 POWERLEVEL9K_MODE='nerdfont-complete'
 source ~/zsh/powerlevel9k/powerlevel9k.zsh-theme
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user ssh dir dir_writable os_icon vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs history)
