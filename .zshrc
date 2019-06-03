@@ -127,4 +127,5 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+	eval `keychain --eval --agents ssh ~/.ssh/id_rsa`
 fi
